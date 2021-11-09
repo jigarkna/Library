@@ -64,6 +64,6 @@ class LibrariesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def library_params
-      params.require(:library).permit(:name, :author, :price)
+      params.require(:library).permit(:name, :author, :price, :message, :pub_date, :address, :phone, :color)
     end
 end

@@ -4,26 +4,3 @@
 
 <%= link_to 'Back', libraries_path %>
 
-<form> <%= form_with do |form| %>
-<strong>CONFIRM YOUR AGE</strong>
-<br>
-<%= form.radio_button :age, "child" %>
-<%= form.label :age_child, "I am younger than 21" %>
-<%= form.radio_button :age, "adult" %>
-<%= form.label :age_adult, "I am over 21" %>
-<br>
-ADD INFO		<%= form.text_area :message, size: "70x5" %><br>
-<br>
-CREATE PASSWORD  <%= form.password_field :password %><br>
-<br>
-PRICING <%= form.number_field :price, in: 1.0..20.0, step: 0.5 %><br>
-<br>BIRTH DATE	<%= form.date_field :born_on %><br>
-<br>TIME FIELD	<%= form.time_field :started_at %><br>
-<br>GRADUATION DAY	<%= form.datetime_local_field :graduation_day %><br>
-<br>BIRTHDAY MONTH	<%= form.month_field :birthday_month %><br>
-<br>BIRTHDAY WEEK	<%= form.week_field :birthday_week %><br>
-<br>ENTER YOUR EMAIL	<%= form.email_field :address %><br>
-<br>ENTER MOBILE NO.	<%= form.telephone_field :phone %><br>
-<br>URL FOR RESUME	<%= form.url_field :homepage %><br>
-<br>CHOOSE YOUR FAV COLOR	<%= form.color_field :favorite_color %><br>
-</form> <% end %>
